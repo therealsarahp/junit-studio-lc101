@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -24,17 +23,22 @@ public class BalancedBracketsTest {
     }
 
     @Test
-    public void noBracketsReturnsFalse(){
-        assertFalse(BalancedBrackets.hasBalancedBrackets(""));
+    public void noBracketsReturnsTrue(){
+        assertTrue(BalancedBrackets.hasBalancedBrackets(""));
     }
 
     @Test
     public void onlyOneBracketsReturnsFalse(){
-        assertFalse(BalancedBrackets.hasBalancedBrackets("[]["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("["));
     }
 
     @Test
-    pub
+    public void oddNumberBracketsReturnsFalse(){
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[ ]["));
+    }
+
+    @Test
+    public void
 
 
 }
